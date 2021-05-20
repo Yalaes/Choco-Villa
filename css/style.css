@@ -35,13 +35,12 @@ body {
   margin-bottom: 2.4rem; }
 
 .header-3 {
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 2rem;
   margin-bottom: 1.2rem; }
 
 .header-4 {
-  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 1.6rem;
@@ -59,18 +58,19 @@ body {
 
 .btn {
   display: inline-block;
+  padding: 0 1rem;
   border: none;
+  text-decoration: none;
   text-transform: uppercase;
-  cursor: pointer;
-  color: #F47A2B;
+  color: #d85f0e;
+  font-weight: 700;
   background: none;
-  border: 1px solid #F47A2B; }
+  border: 1px solid #d85f0e; }
   .btn--cta {
     padding: 1rem 2rem;
-    background: #F47A2B;
+    background: #d85f0e;
     color: #FBFAF7;
-    font-size: 2.1rem;
-    font-weight: 700; }
+    font-size: 2.1rem; }
 
 .section-header {
   position: relative;
@@ -172,7 +172,7 @@ body {
     margin-top: 8rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8rem;
+    gap: 6rem;
     align-items: center; }
   .about__content-image {
     width: 100%; }
@@ -180,16 +180,52 @@ body {
       width: 100%;
       object-fit: cover; }
 
+.rates {
+  background: #FBFAF7; }
+  .rates__wrap {
+    color: #2F2B26; }
+  .rates__content {
+    margin: 8rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 8rem;
+    justify-items: center; }
+  .rates__card {
+    width: auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transition: transform .24s ease-in-out; }
+    .rates__card:hover {
+      transform: scale(1.05); }
+    .rates__card--img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      object-position: center; }
+    .rates__card--title {
+      font-size: 2rem;
+      padding: 8rem 0 1rem; }
+    .rates__card--price {
+      font-size: 2rem; }
+    .rates__card--date {
+      margin-top: auto;
+      padding-top: 8rem;
+      font-size: 1.6rem;
+      font-style: italic; }
+
 .features {
   background-color: #2F2B26;
   color: #FBFAF7; }
   .features__wrap {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 8rem; }
+    column-gap: 6rem; }
 
 .card {
-  text-align: center; }
+  text-align: center;
+  padding: 4rem 2rem; }
   .card__img {
     height: 8rem;
     width: 8rem;
