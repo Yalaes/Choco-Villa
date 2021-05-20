@@ -19,7 +19,7 @@ body {
 
 .header-1 {
   margin: 0;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2.4rem;
   font-family: "Josefin Sans", sans-serif;
   font-size: clamp(3rem, 10vw, 6rem);
   font-weight: 400;
@@ -29,6 +29,7 @@ body {
 
 .header-2 {
   font-weight: 400;
+  letter-spacing: .2rem;
   text-transform: uppercase;
   font-size: clamp(2rem, 2vw, 2.2rem);
   margin-bottom: 2.4rem; }
@@ -38,6 +39,13 @@ body {
   text-transform: uppercase;
   font-size: 2rem;
   margin-bottom: 1.2rem; }
+
+.header-4 {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.6rem;
+  padding: 1rem 0 2rem; }
 
 .block-text {
   padding-bottom: 3rem;
@@ -53,12 +61,13 @@ body {
   display: inline-block;
   border: none;
   text-transform: uppercase;
-  padding: 1rem 2rem;
   cursor: pointer;
-  color: #FBFAF7;
-  background: none; }
+  color: #F47A2B;
+  background: none;
+  border: 1px solid #F47A2B; }
   .btn--cta {
-    background: #E5600A;
+    padding: 1rem 2rem;
+    background: #F47A2B;
     color: #FBFAF7;
     font-size: 2.1rem;
     font-weight: 700; }
@@ -71,26 +80,15 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-size: 3rem; }
-  .section-header::before, .section-header::after {
-    position: absolute;
-    top: 50%;
-    content: "";
-    height: .05rem;
-    width: 20vw;
-    background: rgba(251, 250, 247, 0.2); }
-  .section-header::before {
-    left: 20%; }
-  .section-header::after {
-    right: 15%; }
 
 .page-wrap {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  margin-top: 4rem; }
 
 .page-center {
   max-width: 1140px;
   height: 100%;
   margin: 0 auto;
-  margin-top: 4rem;
   padding: 8rem 0; }
   @media only screen and (max-width: 80em) {
     .page-center {
@@ -102,7 +100,6 @@ body {
   background-position: center;
   width: 100%;
   height: 90vh;
-  border-bottom: 1px solid #5C564E;
   animation: landing 1s cubic-bezier(0.645, 0.045, 0.355, 1); }
   .heroe__content {
     color: #FBFAF7; }
@@ -115,16 +112,41 @@ body {
 
 .nav {
   position: fixed;
-  opacity: 1;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
   height: 4rem;
-  padding: .5rem 1rem;
-  background: #2F2B26;
-  color: #FBFAF7;
-  text-align: right;
-  border-bottom: 1px solid #5C564E; }
+  background: #FBFAF7;
+  color: #2F2B26; }
+  .nav__wrap {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .nav__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .nav__menu--left {
+      margin-right: auto; }
+    .nav__menu--right {
+      margin-left: auto; }
+  .nav__list {
+    margin: 0;
+    list-style: none;
+    text-transform: uppercase;
+    color: #2F2B26;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.5rem; }
+  .nav__item--link a, .nav__item--social a {
+    text-decoration: none;
+    color: #2F2B26; }
 
 .heroe {
   background-image: linear-gradient(45deg, rgba(47, 43, 38, 0.3), rgba(47, 43, 38, 0.05)), url(../images/heroe.jpg);
@@ -132,7 +154,6 @@ body {
   background-position: center;
   width: 100%;
   height: 90vh;
-  border-bottom: 1px solid #5C564E;
   animation: landing 1s cubic-bezier(0.645, 0.045, 0.355, 1); }
   .heroe__content {
     color: #FBFAF7; }
@@ -144,22 +165,35 @@ body {
     justify-content: center; }
 
 .about {
-  background: #2F2B26; }
+  background: #FBFAF7; }
   .about__wrap {
-    color: #FBFAF7; }
+    color: #2F2B26; }
   .about__content {
     margin-top: 8rem;
-    margin-left: -7rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
     align-items: center; }
-    .about__content > * {
-      padding-left: 7rem; }
   .about__content-image {
-    width: 50%; }
+    width: 100%; }
     .about__content-image img {
       width: 100%;
       object-fit: cover; }
-  .about__content-text {
-    width: 50%; }
+
+.features {
+  background-color: #2F2B26;
+  color: #FBFAF7; }
+  .features__wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8rem; }
+
+.card {
+  text-align: center; }
+  .card__img {
+    height: 8rem;
+    width: 8rem;
+    filter: invert(53%) sepia(14%) saturate(3982%) hue-rotate(344deg) brightness(105%) contrast(91%); }
+  .card__text {
+    text-align: center;
+    padding: 0 10%; }
