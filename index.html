@@ -17,36 +17,77 @@
 </head>
 
 <body>
-    <!-- navigation -->
-    <nav class="nav padding-nav">
-        <div class="nav__wrap page-center">
+    <!-- navigation desktop-->
+    <nav class="nav  nav--desktop">
+        <div class="nav__wrap">
+
             <div class="nav__menu">
                 <div class="nav__menu--left">
                     <ul class="nav__list">
-                        <li class="nav__item--social"><a href="#">I</a></li>
-                        <li class="nav__item--social"><a href="#">I</a></li>
-                        <li class="nav__item--social"><a href="#">I</a></li>
-                        <li class="nav__item--social"><a href="#">I</a></li>
+                        <li class="nav__item--social"><a href="#"><img src="images/entypo_mail.svg" alt=""></a></li>
+                        <li class="nav__item--social"><a href="#"><img src="images/mdi_facebook.svg" alt=""></a></li>
+                        <li class="nav__item--social"><a href="#"><img src="images/mdi_twitter.svg" alt=""></a></li>
+                        <li class="nav__item--social"><a href="#"><img src="images/entypo-social_tripadvisor.svg"
+                                    alt=""></a></li>
                     </ul>
                 </div>
                 <div class="nav__menu--right">
                     <ul class="nav__list">
-                        <li class="nav__item--link"><a href="#about">About</a></li>
-                        <li class="nav__item--link"><a href="#features">Features</a></li>
-                        <li class="nav__item--link"><a href="#rates">Rates</a></li>
-                        <li class="nav__item--link"><a href="#testimonials">Testimonials</a></li>
-                        <li class="nav__item--link"><a href="#gallery">Photos</a></li>
-                        <li class="nav__item--link"><a href="#footer">Map</a></li>
-                        <li class="nav__item--link"><a href="#">Contact</a></li>
-                        <li><a href="#" class="btn">Book</a></li>
+                        <li class="link nav__item--link"><a href="#about">About</a></li>
+                        <li class="link nav__item--link"><a href="#features">Features</a></li>
+                        <li class="link nav__item--link"><a href="#rates">Rates</a></li>
+                        <li class="link nav__item--link"><a href="#testimonials">Testimonials</a></li>
+                        <li class="link nav__item--link"><a href="#gallery">Photos</a></li>
+                        <li class="link nav__item--link"><a href="#footer">Map</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
 
+    <!-- navigation burger-->
+    <nav class="nav nav--burger">
+
+        <div class="nav__wrap">
+            <div class="nav__menu">
+
+                <div class="nav__menu--left">
+                    <ul class="nav__list">
+                        <li class="nav__item--social"><a href="#"><img src="images/entypo_mail.svg" alt=""></a></li>
+                        <li class="nav__item--social"><a href="#"><img src="images/mdi_facebook.svg" alt=""></a></li>
+                        <li class="nav__item--social"><a href="#"><img src="images/mdi_twitter.svg" alt=""></a></li>
+                        <li class="nav__item--social"><a href="#"><img src="images/entypo-social_tripadvisor.svg"
+                                    alt=""></a></li>
+                    </ul>
+                </div>
+
+                <a href="#menu-deploy">
+                    <button class="burger-btn">
+                        <span class="burger-btn__bar burger-btn__top"></span>
+                        <span class="burger-btn__bar burger-btn__mid"></span>
+                        <span class="burger-btn__bar burger-btn__bot"></span>
+                    </button>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="nav__menu--deploy" id="menu-deploy">
+            <ul class="nav__list nav__list--deploy">
+                <li class="link nav__item--link"><a href="#about">About</a></li>
+                <li class="link nav__item--link"><a href="#features">Features</a></li>
+                <li class="link nav__item--link"><a href="#rates">Rates</a></li>
+                <li class="link nav__item--link"><a href="#testimonials">Testimonials</a></li>
+                <li class="link nav__item--link"><a href="#gallery">Photos</a></li>
+                <li class="link nav__item--link"><a href="#footer">Map</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
     <!-- full page minus nav -->
-    <div class="page-wrap">
+    <div class="page-wrap" id="top">
 
         <!-- heroe -->
         <header class="heroe">
@@ -68,33 +109,34 @@
 
                 <div class="about__content">
 
+                    <div class="about__content-image about__content--mobile-row-2">
+                        <img src="images/1.jpg" alt=""></div>
+
+                    <div class="about__content-text">
+                        <h3 class="header-3">Lorem, ipsum dolor.</h3>
+                        <p class="block-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+                            suscipit qui, voluptates voluptatum fuga asperiores. Eligendi repudiandae temporibus aut
+                            distinctio.</p>
+                        <p class="block-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+                            suscipit qui, voluptates voluptatum fuga asperiores. Eligendi repudiandae temporibus aut
+                            distinctio.</p>
+
+                    </div>
+
+
+                    <div class="about__content-text">
+                        <h3 class="header-3">Lorem, ipsum dolor.</h3>
+                        <p class="block-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+                            suscipit qui, voluptates voluptatum fuga asperiores. Eligendi repudiandae temporibus aut
+                            distinctio.</p>
+                        <p class="block-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+                            suscipit qui, voluptates voluptatum fuga asperiores. Eligendi repudiandae temporibus aut
+                            distinctio.</p>
+
+                    </div>
+
                     <div class="about__content-image">
                         <img src="images/1.jpg" alt=""></div>
-                    <div class=about__content-text>
-                        <h3 class="header-3">Lorem, ipsum dolor.</h3>
-                        <p class="block-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-                            suscipit qui, voluptates voluptatum fuga asperiores. Eligendi repudiandae temporibus aut
-                            distinctio.</p>
-                        <p class="block-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-                            suscipit qui, voluptates voluptatum fuga asperiores. Eligendi repudiandae temporibus aut
-                            distinctio.</p>
-
-                    </div>
-
-
-                    <div class=about__content-text>
-                        <h3 class="header-3">Lorem, ipsum dolor.</h3>
-                        <p class="block-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-                            suscipit qui, voluptates voluptatum fuga asperiores. Eligendi repudiandae temporibus aut
-                            distinctio.</p>
-                        <p class="block-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-                            suscipit qui, voluptates voluptatum fuga asperiores. Eligendi repudiandae temporibus aut
-                            distinctio.</p>
-
-                    </div>
-
-                    <div class="about__content-image">
-                        <img src="images/2.jpg" alt=""></div>
                 </div>
 
             </div>
@@ -193,7 +235,7 @@
                 <div class="testimonials__content">
 
                     <div class="t__card">
-                        <img src="images/profil-2.png" alt="profil photo of a reviewer" class="t__card-img">
+                        <img src="images/profil-2.jpg" alt="profil photo of a reviewer" class="t__card-img">
                         <div class="rating-stars">&nbsp;5<span>★</span></div>
                         <div class="t__card-flex">
                             <p class="t__card-text">&quot;Piece of Paradise!&quot; </p>
@@ -205,7 +247,8 @@
                         <img src="images/profil-1.jpg" alt="profil photo of a reviewer" class="t__card-img">
                         <div class="rating-stars">&nbsp;5<span>★</span></div>
                         <div class="t__card-flex">
-                            <p class="t__card-text">&quot; High class finishing and furniture, quiet place and fantastic view to the peaceful ocean. Highly recommended&quot; </p>
+                            <p class="t__card-text">&quot; High class finishing and furniture, quiet place and fantastic
+                                view to the peaceful ocean. Highly recommended&quot; </p>
                             <div class="t__card-name header-4">Joice & Jason Weng, Singapore</div>
                         </div>
                     </div>
@@ -214,17 +257,18 @@
                         <img src="images/profil-3.jpg" alt="profil photo of a reviewer" class="t__card-img">
                         <div class="rating-stars">&nbsp;5<span>★</span></div>
                         <div class="t__card-flex">
-                            <p class="t__card-text">&quot;Great place to stay, excellent high quality home, great pool, great service&quot; </p>
+                            <p class="t__card-text">&quot;Great place to stay, excellent high quality home, great pool,
+                                great service&quot; </p>
                             <div class="t__card-name header-4">Ilya, Moscow</div>
                         </div>
                     </div>
 
                     <div class="t__card">
-                        <img src="images/profil-1.jpg" alt="profil photo of a reviewer" class="t__card-img">
+                        <img src="images/profil-4.jpg" alt="profil photo of a reviewer" class="t__card-img">
                         <div class="rating-stars">&nbsp;5<span>★</span></div>
                         <div class="t__card-flex">
-                            <p class="t__card-text">&quot; High class finishing and furniture, quiet place and fantastic view to the peaceful ocean. Highly recommended&quot; </p>
-                            <div class="t__card-name header-4">Joice & Jason Weng, Singapore</div>
+                            <p class="t__card-text">&quot; Beautiful, relaxing and better than expected &quot; </p>
+                            <div class="t__card-name header-4">Wei Cai Lee, Hong Kong</div>
                         </div>
                     </div>
 
@@ -235,7 +279,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- section gallery -->
         <section class="gallery" id="gallery">
             <div class="gallery__grid">
@@ -283,22 +327,31 @@
 
             <div class="footer__nav">
                 <ul class="footer__list">
-                    <li class="footer__items"><a href="" class="footer__link">top</a></li>
+                    <li class="footer__items"><a href="#top" class="footer__link">top</a></li>
                     <li class="footer__items"><a href="" class="footer__link">about</a></li>
                     <li class="footer__items"><a href="" class="footer__link">features</a></li>
                     <li class="footer__items"><a href="" class="footer__link">rates</a></li>
                     <li class="footer__items"><a href="" class="footer__link">testimonials</a></li>
-                    <li class="footer__items"><a href="" class="footer__link">photo gallery</a></li>
+                    <li class="footer__items"><a href="" class="footer__link">photos</a></li>
                 </ul>
             </div>
 
             <div class="footer__map">
-                <iframe width="100%" height="100%"  frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=99.96926397085191%2C9.751019334225548%2C99.97271329164508%2C9.752782516892653&amp;layer=mapnik&amp;marker=9.751901163200204%2C99.97098755829938" ></iframe><a href="https://www.openstreetmap.org/?mlat=9.75190&amp;mlon=99.97099#map=19/9.75190/99.97099&amp;layers=N">View Larger Map</a>
+                <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=99.96926397085191%2C9.751019334225548%2C99.97271329164508%2C9.752782516892653&amp;layer=mapnik&amp;marker=9.751901163200204%2C99.97098755829938"></iframe><a
+                    href="https://www.openstreetmap.org/?mlat=9.75190&amp;mlon=99.97099#map=19/9.75190/99.97099&amp;layers=N">View
+                    Larger Map</a>
             </div>
 
-            <div class="footer__text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta nihil soluta quae, velit accusantium officia cumque expedita magni enim tempora sint culpa explicabo beatae vitae voluptates molestias rem sunt veniam esse adipisci. Itaque, vero autem voluptas sit maiores hic neque delectus eveniet libero. Est suscipit saepe maiores distinctio pariatur?</p></div>
+            <div class="footer__text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta nihil soluta quae, velit
+                    accusantium officia cumque expedita magni enim tempora sint culpa explicabo beatae vitae voluptates
+                    molestias rem sunt veniam esse adipisci. Itaque, vero autem voluptas sit maiores hic neque delectus
+                    eveniet libero. Est suscipit saepe maiores distinctio pariatur?</p>
+            </div>
 
-            <div class="footer__credit">&#169; Choco Villa 2021 - <a href="https://github.com/Yalaes" class="link-credit">Webdesign: Yalaes</a> </div>
+            <div class="footer__credit">&#169; Choco Villa 2021 - <a href="https://github.com/Yalaes"
+                    class="link-credit">Webdesign: Yalaes</a> </div>
         </footer>
 
     </div>

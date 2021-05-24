@@ -6,8 +6,12 @@
   box-sizing: inherit; }
 
 html {
+  scroll-behavior: smooth;
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 68em) {
+    html {
+      font-size: 55%; } }
 
 body {
   font-size: 1.6rem;
@@ -23,23 +27,26 @@ a {
 
 .header-1 {
   margin: 0;
-  margin-bottom: 2.4rem;
   font-family: "Josefin Sans", sans-serif;
-  font-size: clamp(3rem, 10vw, 6rem);
+  font-size: clamp(4.5rem, 10vw, 6rem);
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: .3rem;
+  letter-spacing: .5rem;
   line-height: 1; }
+  @media only screen and (max-width: 41em) {
+    .header-1 {
+      margin-bottom: .5rem; } }
 
 .header-2 {
   font-weight: 400;
   letter-spacing: .2rem;
   text-transform: uppercase;
-  font-size: clamp(2rem, 2vw, 2.2rem);
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
   margin-bottom: 2.4rem; }
 
 .header-3 {
   font-weight: 600;
+  text-align: center;
   text-transform: uppercase;
   font-size: 2rem;
   margin-bottom: 1.2rem; }
@@ -51,7 +58,6 @@ a {
   padding: 1rem 0 2rem; }
 
 .block-text {
-  padding-bottom: 3rem;
   max-width: 50ch; }
 
 .link-credit {
@@ -118,7 +124,7 @@ a {
   color: currentColor;
   transition: .24s ease; }
   .link:hover, .link:focus {
-    filter: brightness(70%); }
+    filter: brightness(200%); }
 
 .page-wrap {
   overflow-x: hidden;
@@ -132,6 +138,9 @@ a {
   @media only screen and (max-width: 80em) {
     .page-center {
       padding: 8rem 4rem; } }
+  @media only screen and (max-width: 17em) {
+    .page-center {
+      padding: 6rem 1.5rem; } }
 
 .footer {
   color: #c0bbb4;
@@ -143,9 +152,9 @@ a {
   .footer__list {
     list-style: none;
     display: flex;
-    justify-content: center; }
-    .footer__list > * + * {
-      padding-left: 3rem; }
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem; }
   .footer__items {
     text-transform: uppercase; }
   .footer__link {
@@ -166,7 +175,10 @@ a {
         color: #FBFAF7; }
   .footer__text {
     max-width: 80ch;
-    margin: 8rem auto; }
+    margin: 8rem auto;
+    padding: 0 2rem; }
+  .footer__credit {
+    padding: 0 2rem; }
 
 .gallery {
   width: 100%;
@@ -178,6 +190,10 @@ a {
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(6, 1fr);
     gap: 2rem; }
+    @media only screen and (max-width: 25em) {
+      .gallery__grid {
+        padding: 1rem;
+        gap: .5rem; } }
   .gallery__img-container {
     overflow: hidden; }
     .gallery__img-container img {
@@ -228,6 +244,22 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center; }
+    @media only screen and (max-width: 68em) {
+      .heroe__left {
+        width: 80%; } }
+    @media only screen and (max-width: 41em) {
+      .heroe__left {
+        width: 100%;
+        text-align: center; } }
+
+.nav--burger {
+  display: none; }
+
+@media only screen and (max-width: 68em) {
+  .nav--desktop {
+    display: none; }
+  .nav--burger {
+    display: block; } }
 
 .nav {
   position: fixed;
@@ -241,6 +273,8 @@ a {
   .nav__wrap {
     padding: 0;
     height: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center; }
@@ -259,15 +293,61 @@ a {
     color: #2F2B26;
     font-weight: 700;
     letter-spacing: 1px;
+    line-height: 1;
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 1.5rem; }
-  .nav__item--link a, .nav__item--social a {
-    text-decoration: none;
-    color: #2F2B26; }
-    .nav__item--link a:active, .nav__item--link a:hover, .nav__item--social a:active, .nav__item--social a:hover {
-      color: gray; }
+    .nav__list img {
+      width: 2.4rem;
+      height: 2.4rem; }
+  .nav__item--social:hover {
+    transform: scale(1.15);
+    transition: transform 0.25s; }
+
+.nav--burger {
+  padding: 1rem 3rem; }
+
+.nav__menu--deploy {
+  background-color: #FBFAF7;
+  position: fixed;
+  z-index: -100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  transform: translateY(-150vh);
+  transition: transform .25s linear; }
+  .nav__menu--deploy:target {
+    transform: translateY(0);
+    transition: transform .5s linear; }
+
+.nav__list--deploy {
+  flex-direction: column;
+  font-size: clamp(1rem, 5vh, 2.5rem);
+  gap: 1.5em; }
+
+.burger-btn {
+  position: absolute;
+  top: 1.2rem;
+  right: 3rem;
+  border: none;
+  background: none;
+  cursor: pointer; }
+  .burger-btn__bar {
+    display: block;
+    background: black;
+    height: 3px;
+    width: 3.5rem;
+    transition: transform .4s, opacity .2s; }
+  .burger-btn__mid {
+    margin: 3px 0; }
+  .burger-btn:hover .burger-btn__top, .burger-btn:focus .burger-btn__top {
+    transform: translateY(1px); }
+  .burger-btn:hover .burger-btn__bot, .burger-btn:focus .burger-btn__bot {
+    transform: translateY(-1px); }
 
 .heroe {
   background-image: linear-gradient(45deg, rgba(47, 43, 38, 0.3), rgba(47, 43, 38, 0.05)), url(../images/heroe.jpg);
@@ -284,6 +364,13 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center; }
+    @media only screen and (max-width: 68em) {
+      .heroe__left {
+        width: 80%; } }
+    @media only screen and (max-width: 41em) {
+      .heroe__left {
+        width: 100%;
+        text-align: center; } }
 
 .about {
   background: #FBFAF7; }
@@ -291,19 +378,41 @@ a {
     color: #2F2B26; }
   .about__content {
     margin-top: 8rem;
+    max-width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 6rem;
-    align-items: center; }
-  .about__content-image {
-    width: 100%;
-    overflow: hidden; }
-    .about__content-image img {
+    align-items: center;
+    justify-items: center; }
+    @media only screen and (max-width: 56em) {
+      .about__content {
+        justify-items: center; } }
+    @media only screen and (max-width: 41em) {
+      .about__content {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, min-content); }
+        .about__content--mobile-row-2 {
+          grid-row: 2; } }
+    .about__content-image {
       width: 100%;
-      object-fit: cover;
-      transition: transform .5s ease; }
-      .about__content-image img:hover {
-        transform: scale(1.05); }
+      overflow: hidden; }
+      @media only screen and (max-width: 41em) {
+        .about__content-image {
+          width: 80%; } }
+      @media only screen and (max-width: 25em) {
+        .about__content-image {
+          width: 100%; } }
+      .about__content-image img {
+        width: 100%;
+        object-fit: cover;
+        transition: transform .5s ease; }
+        .about__content-image img:hover {
+          transform: scale(1.05); }
+    .about__content-text {
+      display: flex;
+      flex-direction: column; }
+      .about__content-text > * + * {
+        padding-top: 1.6rem; }
 
 .testimonials {
   color: #FBFAF7; }
@@ -313,6 +422,17 @@ a {
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     gap: 16rem; }
+    @media only screen and (max-width: 68em) {
+      .testimonials__content {
+        column-gap: 8rem; } }
+    @media only screen and (max-width: 41em) {
+      .testimonials__content {
+        grid-template-columns: 1fr;
+        gap: 16rem;
+        padding: 2rem; } }
+    @media only screen and (max-width: 25em) {
+      .testimonials__content {
+        padding: 0; } }
   .testimonials__link-bottom {
     text-align: center; }
     .testimonials__link-bottom a {
@@ -366,12 +486,15 @@ a {
     gap: 8rem;
     justify-items: center; }
   .rates__card {
-    width: auto;
+    width: 100%;
     padding: 2rem;
     text-align: center;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     transition: transform .24s ease-in-out; }
+    @media only screen and (max-width: 25em) {
+      .rates__card {
+        padding: 0; } }
     .rates__card:hover {
       transform: scale(1.05); }
     .rates__card--img {
@@ -399,10 +522,21 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 6rem; }
+    @media only screen and (max-width: 56em) {
+      .features__wrap {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0; } }
+    @media only screen and (max-width: 41em) {
+      .features__wrap {
+        grid-template-columns: 1fr;
+        gap: 4rem; } }
 
 .card {
   text-align: center;
   padding: 4rem 2rem; }
+  @media only screen and (max-width: 25em) {
+    .card {
+      padding: 2rem 0; } }
   .card__img {
     height: 8rem;
     width: 8rem;
