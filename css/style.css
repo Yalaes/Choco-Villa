@@ -22,6 +22,9 @@ a {
   text-decoration: none;
   color: inherit; }
 
+button {
+  background: none; }
+
 @keyframes landing {
   0% {
     opacity: 0; }
@@ -31,7 +34,7 @@ a {
 .header-1 {
   margin: 0;
   font-family: "Josefin Sans", sans-serif;
-  font-size: clamp(4.5rem, 10vw, 6rem);
+  font-size: clamp(5rem, 12vw, 8rem);
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: .5rem;
@@ -274,26 +277,23 @@ a {
       grid-row: 4 / -1; }
 
 .heroe {
-  background-image: linear-gradient(45deg, rgba(47, 43, 38, 0.3), rgba(47, 43, 38, 0.05)), url(../images/heroe.jpg);
+  background-image: url(../images/hero.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
   animation: landing 1s cubic-bezier(0.645, 0.045, 0.355, 1); }
   .heroe__content {
     color: #FBFAF7; }
   .heroe__left {
-    width: 50%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center; }
-    @media only screen and (max-width: 68em) {
-      .heroe__left {
-        width: 80%; } }
     @media only screen and (max-width: 41em) {
       .heroe__left {
-        width: 100%;
         text-align: center; } }
 
 .nav--burger {
@@ -335,7 +335,6 @@ a {
     margin: 0;
     list-style: none;
     text-transform: uppercase;
-    color: #2F2B26;
     font-weight: 700;
     letter-spacing: 1px;
     line-height: 1;
@@ -343,12 +342,12 @@ a {
     justify-content: space-around;
     align-items: center;
     gap: 1.5rem; }
-    .nav__list img {
-      width: 2.4rem;
-      height: 2.4rem; }
   .nav__item--social:hover {
     transform: scale(1.15);
     transition: transform 0.25s; }
+
+svg {
+  fill: red; }
 
 .nav__menu--deploy {
   background-color: #FBFAF7;
@@ -362,56 +361,71 @@ a {
   place-items: center;
   transform: translateY(-150vh);
   transition: transform .25s linear; }
-  .nav__menu--deploy:target {
+  .nav__menu--deploy.show {
     transform: translateY(0);
     transition: transform .5s linear; }
+
+.menu-open {
+  transform: translateY(0);
+  transition: transform .5s linear; }
 
 .nav__list--deploy {
   flex-direction: column;
   font-size: clamp(1rem, 5vh, 2.5rem);
   gap: 1.5em; }
 
-.burger-btn {
-  position: absolute;
-  top: 1.5rem;
-  right: 3rem;
+.wrap-burger-btn {
+  position: relative;
+  width: 3rem;
+  height: 2rem;
   border: none;
   background: none;
   cursor: pointer; }
-  .burger-btn__bar {
-    display: block;
-    background: black;
-    height: 3px;
-    width: 3.5rem;
-    transition: transform .4s, opacity .2s; }
-  .burger-btn__mid {
-    margin: 3px 0; }
-  .burger-btn:hover .burger-btn__top, .burger-btn:focus .burger-btn__top {
-    transform: translateY(1px); }
-  .burger-btn:hover .burger-btn__bot, .burger-btn:focus .burger-btn__bot {
-    transform: translateY(-1px); }
+
+.burger-icon {
+  position: relative;
+  background-color: black;
+  height: 2px;
+  width: 100%;
+  transition: transform .25s ease; }
+  .burger-icon::before, .burger-icon::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 0;
+    background-color: black; }
+  .burger-icon::before {
+    margin-top: .8rem; }
+  .burger-icon::after {
+    margin-top: -.8rem; }
+  .burger-icon.burger-icon--cross {
+    transform: rotate(45deg); }
+    .burger-icon.burger-icon--cross::before {
+      visibility: hidden; }
+    .burger-icon.burger-icon--cross::after {
+      margin: 0;
+      transform: rotate(90deg); }
 
 .heroe {
-  background-image: linear-gradient(45deg, rgba(47, 43, 38, 0.3), rgba(47, 43, 38, 0.05)), url(../images/heroe.jpg);
+  background-image: url(../images/hero.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
   animation: landing 1s cubic-bezier(0.645, 0.045, 0.355, 1); }
   .heroe__content {
     color: #FBFAF7; }
   .heroe__left {
-    width: 50%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center; }
-    @media only screen and (max-width: 68em) {
-      .heroe__left {
-        width: 80%; } }
     @media only screen and (max-width: 41em) {
       .heroe__left {
-        width: 100%;
         text-align: center; } }
 
 .about {
